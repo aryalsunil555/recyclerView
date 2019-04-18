@@ -1,5 +1,6 @@
 package ContactsAdapter;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -8,9 +9,21 @@ import android.widget.TextView;
 
 import com.e.recyclerview.R;
 
+import java.util.List;
+
+import Model.Contacts;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ContactsViewHolder> {
+public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ContactsViewHolder>
+{
+
+Context mContext;
+List<Contacts> ContactList;
+
+
+
+
+
     @NonNull
     @Override
     public ContactsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -39,5 +52,6 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
         tvnumber=itemView.findViewById(R.id.tvnumber);
 
     }
+
 }
 }
